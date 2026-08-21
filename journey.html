@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the IT learning journey of VIPM TECHJOURNEY at NIT, from the beginning of learning to building practical technology projects.">
+    <meta name="author" content="VIPM TECHJOURNEY">
+
+    <title>My Journey | VIPM TECHJOURNEY</title>
+
+    <!-- Bootstrap 5 --> 
+    <link href="assets/font/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons --> 
+     <link href="assets/font/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Journey Page CSS -->
+    <style>
+
+        /* =====================================================
+           JOURNEY HERO
+        ===================================================== */
+
+        .journey-hero {
+
+            position: relative;
+
+            min-height: 65vh;
+
+            display: flex;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            padding-top: 110px;
+
+            background:
+
+                radial-gradient(
+                    circle at 80% 30%,
+                    rgba(37, 99, 235, 0.16),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 20% 70%,
+                    rgba(6, 182, 212, 0.08),
+                    transparent 30%
+                ),
+
+                var(--dark-navy);
+
+        }
+
+        .journey-hero-content {
+
+            position: relative;
+
+            z-index: 3;
+
+            max-width: 850px;
+
+            margin: auto;
+
+            text-align: center;
+
+        }
+
+        .journey-hero h1 {
+
+            font-size: clamp(45px, 6vw, 72px);
+
+            line-height: 1.05;
+
+            margin: 20px 0;
+
+        }
+
+        .journey-hero h1 span {
+
+            color: var(--cyan);
+
+        }
+
+        .journey-hero p {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            color: var(--text-light);
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           JOURNEY STATS
+        ===================================================== */
+
+        .journey-stats {
+
+            position: relative;
+
+            z-index: 5;
+
+            margin-top: -55px;
+
+        }
+
+        .journey-stat-card {
+
+            height: 100%;
+
+            padding: 28px 20px;
+
+            text-align: center;
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            background:
+
+                rgba(17, 28, 49, 0.9);
+
+            backdrop-filter: blur(15px);
+
+            transition: var(--transition);
+
+        }
+
+        .journey-stat-card:hover {
+
+            transform: translateY(-7px);
+
+            border-color:
+
+                rgba(6, 182, 212, 0.35);
+
+        }
+
+        .journey-stat-icon {
+
+            width: 50px;
+
+            height: 50px;
+
+            margin: 0 auto 14px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 12px;
+
+            color: var(--cyan);
+
+            background:
+
+                rgba(6, 182, 212, 0.08);
+
+            font-size: 22px;
+
+        }
+
+        .journey-stat-card h3 {
+
+            margin-bottom: 5px;
+
+            font-size: 18px;
+
+        }
+
+        .journey-stat-card p {
+
+            margin: 0;
+
+            color: var(--text-muted);
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           TIMELINE
+        ===================================================== */
+
+        .timeline-section {
+
+            background: var(--dark-navy);
+
+        }
+
+        .journey-timeline {
+
+            position: relative;
+
+            max-width: 1000px;
+
+            margin: 65px auto 0;
+
+        }
+
+        .journey-timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            bottom: 0;
+
+            left: 50%;
+
+            width: 2px;
+
+            transform: translateX(-50%);
+
+            background:
+
+                linear-gradient(
+
+                    to bottom,
+
+                    transparent,
+
+                    var(--electric-blue),
+
+                    var(--cyan),
+
+                    transparent
+
+                );
+
+        }
+
+        .timeline-item {
+
+            position: relative;
+
+            width: 50%;
+
+            padding: 0 45px 70px;
+
+        }
+
+        .timeline-item:nth-child(odd) {
+
+            left: 0;
+
+            text-align: right;
+
+        }
+
+        .timeline-item:nth-child(even) {
+
+            left: 50%;
+
+            text-align: left;
+
+        }
+
+        .timeline-dot {
+
+            position: absolute;
+
+            top: 0;
+
+            width: 17px;
+
+            height: 17px;
+
+            border-radius: 50%;
+
+            background: var(--cyan);
+
+            border: 4px solid var(--dark-navy);
+
+            box-shadow:
+
+                0 0 0 2px var(--cyan),
+
+                0 0 25px rgba(6, 182, 212, 0.45);
+
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+
+            right: -9px;
+
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+
+            left: -9px;
+
+        }
+
+        .timeline-card {
+
+            padding: 28px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 16px;
+
+            background:
+
+                rgba(17, 28, 49, 0.5);
+
+            transition: var(--transition);
+
+        }
+
+        .timeline-card:hover {
+
+            transform: translateY(-5px);
+
+            border-color:
+
+                rgba(37, 99, 235, 0.4);
+
+            box-shadow:
+
+                0 20px 45px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .timeline-number {
+
+            display: inline-flex;
+
+            padding: 5px 10px;
+
+            border-radius: 50px;
+
+            background:
+
+                rgba(37, 99, 235, 0.1);
+
+            color: var(--electric-blue-light);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 13px;
+
+        }
+
+        .timeline-card h3 {
+
+            font-size: 21px;
+
+            margin-bottom: 10px;
+
+        }
+
+        .timeline-card p {
+
+            margin: 0;
+
+            color: var(--text-muted);
+
+            line-height: 1.8;
+
+            font-size: 14px;
+
+        }
+
+        .timeline-tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 18px;
+
+        }
+
+        .timeline-item:nth-child(odd) .timeline-tags {
+
+            justify-content: flex-end;
+
+        }
+
+        .timeline-tags span {
+
+            padding: 4px 9px;
+
+            border-radius: 5px;
+
+            background:
+
+                rgba(6, 182, 212, 0.07);
+
+            color: var(--cyan-light);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+        }
+
+
+        /* =====================================================
+           LEARNING SECTION
+        ===================================================== */
+
+        .learning-section {
+
+            background: var(--dark-navy-light);
+
+        }
+
+        .learning-card {
+
+            height: 100%;
+
+            padding: 30px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 16px;
+
+            background:
+
+                rgba(11, 18, 32, 0.5);
+
+            transition: var(--transition);
+
+        }
+
+        .learning-card:hover {
+
+            transform: translateY(-6px);
+
+            border-color:
+
+                rgba(6, 182, 212, 0.3);
+
+        }
+
+        .learning-icon {
+
+            width: 50px;
+
+            height: 50px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 18px;
+
+            border-radius: 12px;
+
+            background:
+
+                rgba(37, 99, 235, 0.1);
+
+            color: var(--cyan);
+
+            font-size: 22px;
+
+        }
+
+        .learning-card h3 {
+
+            font-size: 19px;
+
+            margin-bottom: 10px;
+
+        }
+
+        .learning-card p {
+
+            color: var(--text-muted);
+
+            line-height: 1.7;
+
+            font-size: 14px;
+
+            margin-bottom: 0;
+
+        }
+
+
+        /* =====================================================
+           EXPERIENCE
+        ===================================================== */
+
+        .experience-section {
+
+            background: var(--dark-navy);
+
+        }
+
+        .experience-box {
+
+            padding: 50px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            background:
+
+                linear-gradient(
+
+                    135deg,
+
+                    rgba(37, 99, 235, 0.08),
+
+                    rgba(6, 182, 212, 0.03)
+
+                );
+
+        }
+
+        .experience-list {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 30px 0 0;
+
+        }
+
+        .experience-list li {
+
+            display: flex;
+
+            gap: 14px;
+
+            margin-bottom: 17px;
+
+            color: var(--text-light);
+
+            line-height: 1.6;
+
+        }
+
+        .experience-list i {
+
+            color: var(--cyan);
+
+            margin-top: 3px;
+
+        }
+
+
+        /* =====================================================
+           FUTURE GOALS
+        ===================================================== */
+
+        .future-section {
+
+            background: var(--dark-navy-light);
+
+        }
+
+        .goal-card {
+
+            padding: 28px;
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            background: rgba(11, 18, 32, 0.5);
+
+            transition: var(--transition);
+
+        }
+
+        .goal-card:hover {
+
+            transform: translateY(-6px);
+
+            border-color: var(--electric-blue);
+
+        }
+
+        .goal-number {
+
+            font-size: 12px;
+
+            color: var(--cyan);
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 12px;
+
+        }
+
+        .goal-card h3 {
+
+            font-size: 18px;
+
+            margin-bottom: 9px;
+
+        }
+
+        .goal-card p {
+
+            color: var(--text-muted);
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            margin: 0;
+
+        }
+
+
+        /* =====================================================
+           JOURNEY CTA
+        ===================================================== */
+
+        .journey-cta {
+
+            padding: 100px 0;
+
+            background: var(--dark-navy);
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE TIMELINE
+        ===================================================== */
+
+        @media (max-width: 767px) {
+
+            .journey-hero {
+
+                min-height: 65vh;
+
+            }
+
+            .journey-hero p {
+
+                font-size: 16px;
+
+            }
+
+            .journey-stats {
+
+                margin-top: -30px;
+
+            }
+
+            .journey-timeline::before {
+
+                left: 15px;
+
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+
+                width: 100%;
+
+                left: 0;
+
+                text-align: left;
+
+                padding:
+
+                    0 0 45px 50px;
+
+            }
+
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+
+                left: 7px;
+
+                right: auto;
+
+            }
+
+            .timeline-item:nth-child(odd) .timeline-tags {
+
+                justify-content: flex-start;
+
+            }
+
+            .experience-box {
+
+                padding: 30px 22px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top vipm-navbar">
+
+    <div class="container">
+
+        <a class="navbar-brand vipm-brand" href="index.html">
+
+            <span class="brand-icon">
+                <i class="bi bi-code-slash"></i>
+            </span>
+
+            <span class="brand-text">
+                VIPM<span>TECHJOURNEY</span>
+            </span>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="journey.html">
+                        My Journey
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="skills.html">
+                        Skills
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">
+                        Projects
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link nav-contact" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     JOURNEY HERO
+========================================================= -->
+
+<section class="journey-hero">
+
+    <div class="hero-grid"></div>
+
+    <div class="tech-circle circle-one"></div>
+
+    <div class="tech-circle circle-two"></div>
+
+    <div class="tech-glow glow-one"></div>
+
+    <div class="tech-glow glow-two"></div>
+
+
+    <div class="container">
+
+        <div class="journey-hero-content reveal">
+
+            <span class="section-label">
+
+                <i class="bi bi-signpost-split"></i>
+
+                MY IT JOURNEY
+
+            </span>
+
+            <h1>
+
+                Learning.
+                Building.
+                <span>Growing.</span>
+
+            </h1>
+
+            <p>
+
+                This is the story of my journey through Information
+                Technology — from learning the basics to developing
+                practical skills, projects and professional goals.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     JOURNEY STATS
+========================================================= -->
+
+<section class="journey-stats">
+
+    <div class="container">
+
+        <div class="row g-3">
+
+            <div class="col-6 col-lg-3 reveal">
+
+                <div class="journey-stat-card">
+
+                    <div class="journey-stat-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+
+                    <h3>IT Student</h3>
+
+                    <p>
+                        NIT, Mabibo
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3 reveal">
+
+                <div class="journey-stat-card">
+
+                    <div class="journey-stat-icon">
+                        <i class="bi bi-code-square"></i>
+                    </div>
+
+                    <h3>Learning</h3>
+
+                    <p>
+                        Technical Skills
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3 reveal">
+
+                <div class="journey-stat-card">
+
+                    <div class="journey-stat-icon">
+                        <i class="bi bi-kanban"></i>
+                    </div>
+
+                    <h3>Building</h3>
+
+                    <p>
+                        Practical Projects
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3 reveal">
+
+                <div class="journey-stat-card">
+
+                    <div class="journey-stat-icon">
+                        <i class="bi bi-rocket-takeoff"></i>
+                    </div>
+
+                    <h3>Future</h3>
+
+                    <p>
+                        Professional Growth
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TIMELINE
+========================================================= -->
+
+<section class="timeline-section section-padding">
+
+    <div class="container">
+
+        <div class="section-heading text-center reveal">
+
+            <span class="section-label">
+
+                <i class="bi bi-clock-history"></i>
+
+                THE JOURNEY
+
+            </span>
+
+            <h2>
+
+                My Path Through
+                <span>Information Technology</span>
+
+            </h2>
+
+            <p>
+
+                Every stage represents an opportunity to learn,
+                practice, solve problems and become better.
+
+            </p>
+
+        </div>
+
+
+        <div class="journey-timeline">
+
+
+            <!-- 01 -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="timeline-number">
+                        STEP 01
+                    </span>
+
+                    <h3>
+                        Starting the Journey
+                    </h3>
+
+                    <p>
+
+                        My journey started with an interest in
+                        understanding how computers, software and
+                        digital systems work.
+
+                    </p>
+
+                    <div class="timeline-tags">
+
+                        <span>Computer Basics</span>
+
+                        <span>IT Concepts</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 02 -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="timeline-number">
+                        STEP 02
+                    </span>
+
+                    <h3>
+                        Learning the Fundamentals
+                    </h3>
+
+                    <p>
+
+                        I began developing knowledge in programming,
+                        databases, networking, web development and
+                        system concepts.
+
+                    </p>
+
+                    <div class="timeline-tags">
+
+                        <span>Programming</span>
+
+                        <span>Database</span>
+
+                        <span>Networking</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 03 -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="timeline-number">
+                        STEP 03
+                    </span>
+
+                    <h3>
+                        Practical Learning
+                    </h3>
+
+                    <p>
+
+                        Learning became more practical through
+                        assignments, exercises and activities that
+                        required me to apply what I had studied.
+
+                    </p>
+
+                    <div class="timeline-tags">
+
+                        <span>Practice</span>
+
+                        <span>Problem Solving</span>
+
+                        <span>Assignments</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 04 -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="timeline-number">
+                        STEP 04
+                    </span>
+
+                    <h3>
+                        Building Projects
+                    </h3>
+
+                    <p>
+
+                        I started turning ideas into practical
+                        websites, systems and other technology-based
+                        projects.
+
+                    </p>
+
+                    <div class="timeline-tags">
+
+                        <span>Web Development</span>
+
+                        <span>Systems</span>
+
+                        <span>Projects</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 05 -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="timeline-number">
+                        STEP 05
+                    </span>
+
+                    <h3>
+                        Growing Professionally
+                    </h3>
+
+                    <p>
+
+                        Beyond technical knowledge, I continue
+                        developing communication, teamwork,
+                        creativity and professional problem-solving
+                        skills.
+
+                    </p>
+
+                    <div class="timeline-tags">
+
+                        <span>Teamwork</span>
+
+                        <span>Creativity</span>
+
+                        <span>Professional Growth</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 06 -->
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <span class="timeline-number">
+                        STEP 06
+                    </span>
+
+                    <h3>
+                        Looking Ahead
+                    </h3>
+
+                    <p>
+
+                        My journey continues. I want to keep learning
+                        modern technologies, build useful solutions
+                        and grow into a skilled IT professional.
+
+                    </p>
+
+                    <div class="timeline-tags">
+
+                        <span>Innovation</span>
+
+                        <span>Technology</span>
+
+                        <span>Future</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHAT I AM LEARNING
+========================================================= -->
+
+<section class="learning-section section-padding">
+
+    <div class="container">
+
+        <div class="section-heading text-center reveal">
+
+            <span class="section-label">
+
+                <i class="bi bi-journal-code"></i>
+
+                MY LEARNING
+
+            </span>
+
+            <h2>
+
+                What I Am
+                <span>Exploring</span>
+
+            </h2>
+
+            <p>
+
+                My learning covers different areas of IT that help
+                me understand technology from different perspectives.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="learning-card">
+
+                    <div class="learning-icon">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+
+                    <h3>
+                        Programming
+                    </h3>
+
+                    <p>
+
+                        Learning how to write code, understand
+                        programming logic and create solutions
+                        using different technologies.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="learning-card">
+
+                    <div class="learning-icon">
+                        <i class="bi bi-globe2"></i>
+                    </div>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                    <p>
+
+                        Building responsive websites using
+                        HTML, CSS, JavaScript, Bootstrap and
+                        other web technologies.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="learning-card">
+
+                    <div class="learning-icon">
+                        <i class="bi bi-database"></i>
+                    </div>
+
+                    <h3>
+                        Databases
+                    </h3>
+
+                    <p>
+
+                        Understanding how information is stored,
+                        organized, connected and managed using
+                        database systems.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="learning-card">
+
+                    <div class="learning-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+
+                    <h3>
+                        Networking
+                    </h3>
+
+                    <p>
+
+                        Exploring how computers, devices and
+                        systems communicate and share information.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="learning-card">
+
+                    <div class="learning-icon">
+                        <i class="bi bi-window-stack"></i>
+                    </div>
+
+                    <h3>
+                        System Development
+                    </h3>
+
+                    <p>
+
+                        Learning how systems are planned, designed,
+                        developed, tested and improved to solve
+                        real-world problems.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="learning-card">
+
+                    <div class="learning-icon">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+
+                    <h3>
+                        Problem Solving
+                    </h3>
+
+                    <p>
+
+                        Developing the ability to analyze problems,
+                        think logically and create practical
+                        technology-based solutions.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PRACTICAL EXPERIENCE
+========================================================= -->
+
+<section class="experience-section section-padding">
+
+    <div class="container">
+
+        <div class="experience-box reveal">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    <span class="section-label">
+
+                        <i class="bi bi-tools"></i>
+
+                        PRACTICAL EXPERIENCE
+
+                    </span>
+
+                    <h2 class="section-title">
+
+                        Turning Knowledge
+                        Into <span>Practice</span>
+
+                    </h2>
+
+                    <p class="section-text">
+
+                        Understanding technology is not only about
+                        studying theory. Practical work helps me
+                        understand how knowledge can be used to
+                        solve real problems.
+
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <ul class="experience-list">
+
+                        <li>
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            <span>
+                                Developing websites and user interfaces.
+                            </span>
+
+                        </li>
+
+                        <li>
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            <span>
+                                Working with databases and structured data.
+                            </span>
+
+                        </li>
+
+                        <li>
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            <span>
+                                Creating academic and personal projects.
+                            </span>
+
+                        </li>
+
+                        <li>
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            <span>
+                                Practicing problem-solving and system analysis.
+                            </span>
+
+                        </li>
+
+                        <li>
+
+                            <i class="bi bi-check-circle-fill"></i>
+
+                            <span>
+                                Improving technical and professional skills.
+                            </span>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FUTURE GOALS
+========================================================= -->
+
+<section class="future-section section-padding">
+
+    <div class="container">
+
+        <div class="section-heading text-center reveal">
+
+            <span class="section-label">
+
+                <i class="bi bi-rocket"></i>
+
+                THE FUTURE
+
+            </span>
+
+            <h2>
+
+                Where I Am
+                <span>Going</span>
+
+            </h2>
+
+            <p>
+
+                The journey does not end with learning.
+                It continues with growth, creativity and impact.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-md-6 col-lg-3 reveal">
+
+                <div class="goal-card">
+
+                    <div class="goal-number">
+                        GOAL 01
+                    </div>
+
+                    <h3>
+                        Improve My Skills
+                    </h3>
+
+                    <p>
+
+                        Continue practicing and improving my
+                        technical abilities.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3 reveal">
+
+                <div class="goal-card">
+
+                    <div class="goal-number">
+                        GOAL 02
+                    </div>
+
+                    <h3>
+                        Build Better Projects
+                    </h3>
+
+                    <p>
+
+                        Create useful and professional technology
+                        solutions.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3 reveal">
+
+                <div class="goal-card">
+
+                    <div class="goal-number">
+                        GOAL 03
+                    </div>
+
+                    <h3>
+                        Explore New Tech
+                    </h3>
+
+                    <p>
+
+                        Keep discovering modern technologies and
+                        development approaches.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3 reveal">
+
+                <div class="goal-card">
+
+                    <div class="goal-number">
+                        GOAL 04
+                    </div>
+
+                    <h3>
+                        Become Professional
+                    </h3>
+
+                    <p>
+
+                        Grow into a confident and capable
+                        Information Technology professional.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="journey-cta">
+
+    <div class="container">
+
+        <div class="cta-box reveal">
+
+            <div class="cta-content">
+
+                <span class="section-label">
+
+                    <i class="bi bi-stars"></i>
+
+                    THE JOURNEY CONTINUES
+
+                </span>
+
+                <h2>
+
+                    There is always
+                    something new to <span>learn.</span>
+
+                </h2>
+
+                <p>
+
+                    Explore my skills and projects to see how
+                    my learning journey is turning into practical
+                    technology work.
+
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+
+                    <a
+                        href="skills.html"
+                        class="btn btn-primary-vipm">
+
+                        Explore My Skills
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                    <a
+                        href="projects.html"
+                        class="btn btn-outline-vipm">
+
+                        View Projects
+
+                        <i class="bi bi-grid"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="cta-decoration">
+
+                <i class="bi bi-signpost-2"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <!-- Brand -->
+
+            <div class="col-lg-5">
+
+                <a
+                    href="index.html"
+                    class="vipm-brand footer-brand">
+
+                    <span class="brand-icon">
+
+                        <i class="bi bi-code-slash"></i>
+
+                    </span>
+
+                    <span class="brand-text">
+
+                        VIPM<span>TECHJOURNEY</span>
+
+                    </span>
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    A personal IT journey focused on learning,
+                    building, exploring technology and preparing
+                    for the future.
+
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a
+                        href="https://wa.me/255786459085"
+                        target="_blank"
+                        aria-label="WhatsApp">
+
+                        <i class="bi bi-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Links -->
+
+            <div class="col-6 col-lg-3">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="journey.html">
+                            My Journey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="skills.html">
+                            Skills
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="projects.html">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="col-6 col-lg-4">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <ul class="footer-contact">
+
+                    <li>
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        <span>
+                            NIT, Mabibo,<br>
+                            Dar es Salaam, Tanzania
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        <i class="bi bi-envelope"></i>
+
+                        <a href="mailto:vipmmaranatha03@gmail.com">
+
+                            vipmmaranatha03@gmail.com
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <i class="bi bi-telephone"></i>
+
+                        <a href="tel:+255786459085">
+
+                            0786459085
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © <span id="currentYear"></span>
+                VIPM TECHJOURNEY.
+                All Rights Reserved.
+
+            </p>
+
+            <p>
+
+                Learning today.
+                Building tomorrow.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     SCROLL TOP
+========================================================= -->
+
+<button
+    id="scrollTopBtn"
+    class="scroll-top"
+    aria-label="Scroll to top">
+
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Bootstrap JS -->
+<script src="assets/font/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Main JavaScript -->
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

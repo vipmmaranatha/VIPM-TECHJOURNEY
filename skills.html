@@ -1,0 +1,2587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the technical, development, database, networking, tools and soft skills of VIPM TECHJOURNEY.">
+    <meta name="author" content="VIPM TECHJOURNEY">
+
+    <title>My Skills | VIPM TECHJOURNEY</title>
+
+    <!-- Bootstrap 5 --> 
+    <link href="assets/font/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons --> 
+     <link href="assets/font/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Skills Page CSS -->
+    <style>
+
+        /* =====================================================
+           SKILLS HERO
+        ===================================================== */
+
+        .skills-hero {
+            position: relative;
+            min-height: 65vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding-top: 110px;
+
+            background:
+                radial-gradient(
+                    circle at 82% 25%,
+                    rgba(37, 99, 235, 0.17),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 15% 75%,
+                    rgba(6, 182, 212, 0.09),
+                    transparent 30%
+                ),
+                var(--dark-navy);
+        }
+
+        .skills-hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .skills-hero h1 {
+            font-size: clamp(45px, 6vw, 72px);
+            line-height: 1.05;
+            margin: 20px 0;
+        }
+
+        .skills-hero h1 span {
+            color: var(--cyan);
+        }
+
+        .skills-hero p {
+            max-width: 720px;
+            margin: auto;
+            color: var(--text-light);
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           SKILLS OVERVIEW
+        ===================================================== */
+
+        .skills-overview {
+            position: relative;
+            z-index: 5;
+            margin-top: -55px;
+        }
+
+        .skill-overview-card {
+            height: 100%;
+            padding: 28px 20px;
+            text-align: center;
+
+            border: 1px solid var(--border);
+            border-radius: 16px;
+
+            background: rgba(17, 28, 49, 0.92);
+
+            backdrop-filter: blur(15px);
+
+            transition: var(--transition);
+        }
+
+        .skill-overview-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(6, 182, 212, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+        }
+
+        .skill-overview-icon {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            color: var(--cyan);
+            background: rgba(6, 182, 212, 0.08);
+
+            font-size: 23px;
+        }
+
+        .skill-overview-card h3 {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+
+        .skill-overview-card p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           TECHNICAL SKILLS
+        ===================================================== */
+
+        .technical-section {
+            background: var(--dark-navy);
+        }
+
+        .skill-category {
+            height: 100%;
+            padding: 30px;
+
+            border: 1px solid var(--border);
+            border-radius: 18px;
+
+            background: rgba(17, 28, 49, 0.45);
+
+            transition: var(--transition);
+        }
+
+        .skill-category:hover {
+            transform: translateY(-6px);
+            border-color: rgba(37, 99, 235, 0.4);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+        }
+
+        .skill-category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .skill-category-icon {
+            width: 50px;
+            height: 50px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 13px;
+
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--cyan);
+
+            font-size: 21px;
+        }
+
+        .skill-category-header h3 {
+            margin: 0;
+            font-size: 21px;
+        }
+
+        .skill-category-header p {
+            margin: 3px 0 0;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           SKILL ITEMS
+        ===================================================== */
+
+        .skill-item {
+            margin-bottom: 21px;
+        }
+
+        .skill-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .skill-name {
+            color: var(--text-light);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .skill-status {
+            color: var(--cyan);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+        }
+
+        .skill-progress {
+            height: 6px;
+            overflow: hidden;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .skill-progress-bar {
+            height: 100%;
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--electric-blue),
+                    var(--cyan)
+                );
+
+            box-shadow: 0 0 12px rgba(6, 182, 212, 0.25);
+        }
+
+
+        /* =====================================================
+           DEVELOPMENT
+        ===================================================== */
+
+        .development-section {
+            background: var(--dark-navy-light);
+        }
+
+        .development-card {
+            height: 100%;
+            padding: 32px;
+
+            border: 1px solid var(--border);
+            border-radius: 18px;
+
+            background: rgba(11, 18, 32, 0.55);
+
+            transition: var(--transition);
+        }
+
+        .development-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(6, 182, 212, 0.35);
+        }
+
+        .development-icon {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 18px;
+
+            border-radius: 14px;
+
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--cyan);
+
+            font-size: 23px;
+        }
+
+        .development-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .development-card p {
+            color: var(--text-muted);
+            line-height: 1.75;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .technology-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .technology-tags span {
+            padding: 5px 9px;
+
+            border-radius: 6px;
+
+            background: rgba(6, 182, 212, 0.07);
+            color: var(--cyan-light);
+
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           DATABASE + NETWORKING
+        ===================================================== */
+
+        .database-section {
+            background: var(--dark-navy);
+        }
+
+        .networking-section {
+            background: var(--dark-navy-light);
+        }
+
+        .specialized-card {
+            height: 100%;
+            padding: 35px;
+
+            border: 1px solid var(--border);
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(37, 99, 235, 0.07),
+                    rgba(6, 182, 212, 0.025)
+                );
+
+            transition: var(--transition);
+        }
+
+        .specialized-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(6, 182, 212, 0.35);
+        }
+
+        .specialized-icon {
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background: rgba(6, 182, 212, 0.08);
+            color: var(--cyan);
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+        }
+
+        .specialized-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .specialized-card > p {
+            color: var(--text-muted);
+            line-height: 1.75;
+            font-size: 14px;
+        }
+
+        .specialized-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0 0;
+        }
+
+        .specialized-list li {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 13px;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .specialized-list i {
+            color: var(--cyan);
+            margin-top: 3px;
+        }
+
+
+        /* =====================================================
+           TOOLS
+        ===================================================== */
+
+        .tools-section {
+            background: var(--dark-navy);
+        }
+
+        .tool-card {
+            height: 100%;
+            padding: 25px;
+
+            border: 1px solid var(--border);
+            border-radius: 15px;
+
+            background: rgba(17, 28, 49, 0.45);
+
+            text-align: center;
+
+            transition: var(--transition);
+        }
+
+        .tool-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(37, 99, 235, 0.4);
+        }
+
+        .tool-icon {
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 14px;
+
+            border-radius: 13px;
+
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--cyan);
+
+            font-size: 22px;
+        }
+
+        .tool-card h3 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .tool-card p {
+            color: var(--text-muted);
+            font-size: 11px;
+            margin: 5px 0 0;
+        }
+
+
+        /* =====================================================
+           SOFT SKILLS
+        ===================================================== */
+
+        .soft-skills-section {
+            background: var(--dark-navy-light);
+        }
+
+        .soft-skill-card {
+            height: 100%;
+            padding: 27px;
+
+            border: 1px solid var(--border);
+            border-radius: 16px;
+
+            background: rgba(11, 18, 32, 0.5);
+
+            transition: var(--transition);
+        }
+
+        .soft-skill-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(6, 182, 212, 0.35);
+        }
+
+        .soft-skill-card i {
+            display: block;
+            color: var(--cyan);
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .soft-skill-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .soft-skill-card p {
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           LEARNING PROGRESS
+        ===================================================== */
+
+        .progress-section {
+            background: var(--dark-navy);
+        }
+
+        .progress-wrapper {
+            max-width: 900px;
+            margin: 55px auto 0;
+        }
+
+        .learning-progress-card {
+            padding: 28px;
+
+            border: 1px solid var(--border);
+            border-radius: 17px;
+
+            background: rgba(17, 28, 49, 0.45);
+
+            margin-bottom: 16px;
+
+            transition: var(--transition);
+        }
+
+        .learning-progress-card:hover {
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+
+        .learning-progress-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .learning-progress-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .learning-progress-name i {
+            color: var(--cyan);
+        }
+
+        .learning-progress-value {
+            color: var(--cyan);
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .learning-track {
+            height: 7px;
+            overflow: hidden;
+
+            border-radius: 50px;
+
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .learning-fill {
+            height: 100%;
+            border-radius: 50px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--electric-blue),
+                    var(--cyan)
+                );
+        }
+
+        .learning-note {
+            margin-top: 35px;
+            padding: 20px;
+
+            border-left: 3px solid var(--cyan);
+            border-radius: 8px;
+
+            background: rgba(6, 182, 212, 0.05);
+
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           CURRENT FOCUS
+        ===================================================== */
+
+        .focus-section {
+            background: var(--dark-navy-light);
+        }
+
+        .focus-box {
+            position: relative;
+            overflow: hidden;
+
+            padding: 50px;
+
+            border: 1px solid var(--border);
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(37, 99, 235, 0.09),
+                    rgba(6, 182, 212, 0.035)
+                );
+        }
+
+        .focus-box::after {
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+            height: 250px;
+
+            right: -90px;
+            top: -100px;
+
+            border-radius: 50%;
+
+            background: rgba(6, 182, 212, 0.07);
+
+            filter: blur(4px);
+        }
+
+        .focus-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .focus-content h2 {
+            max-width: 650px;
+        }
+
+        .focus-content p {
+            max-width: 700px;
+
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .focus-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .focus-items span {
+            padding: 8px 13px;
+
+            border: 1px solid rgba(6, 182, 212, 0.15);
+            border-radius: 7px;
+
+            color: var(--cyan-light);
+            background: rgba(6, 182, 212, 0.06);
+
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .skills-cta {
+            padding: 100px 0;
+            background: var(--dark-navy);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 767px) {
+
+            .skills-hero {
+                min-height: 65vh;
+            }
+
+            .skills-hero p {
+                font-size: 16px;
+            }
+
+            .skills-overview {
+                margin-top: -30px;
+            }
+
+            .skill-category,
+            .development-card,
+            .specialized-card {
+                padding: 25px;
+            }
+
+            .focus-box {
+                padding: 32px 23px;
+            }
+
+            .learning-progress-card {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top vipm-navbar">
+
+    <div class="container">
+
+        <a class="navbar-brand vipm-brand" href="index.html">
+
+            <span class="brand-icon">
+                <i class="bi bi-code-slash"></i>
+            </span>
+
+            <span class="brand-text">
+                VIPM<span>TECHJOURNEY</span>
+            </span>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="journey.html">
+                        My Journey
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="skills.html">
+                        Skills
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">
+                        Projects
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link nav-contact" href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="skills-hero">
+
+    <div class="hero-grid"></div>
+
+    <div class="tech-circle circle-one"></div>
+
+    <div class="tech-circle circle-two"></div>
+
+    <div class="tech-glow glow-one"></div>
+
+    <div class="tech-glow glow-two"></div>
+
+
+    <div class="container">
+
+        <div class="skills-hero-content reveal">
+
+            <span class="section-label">
+
+                <i class="bi bi-code-square"></i>
+
+                MY SKILLS
+
+            </span>
+
+            <h1>
+
+                Learning Skills.
+                <span>Building Ability.</span>
+
+            </h1>
+
+            <p>
+
+                A growing collection of technical and professional
+                skills developed through classroom learning,
+                practical work, personal projects and continuous
+                exploration of technology.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SKILLS OVERVIEW
+========================================================= -->
+
+<section class="skills-overview">
+
+    <div class="container">
+
+        <div class="row g-3">
+
+
+            <div class="col-6 col-lg reveal">
+
+                <div class="skill-overview-card">
+
+                    <div class="skill-overview-icon">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+
+                    <h3>Development</h3>
+
+                    <p>Building digital solutions</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg reveal">
+
+                <div class="skill-overview-card">
+
+                    <div class="skill-overview-icon">
+                        <i class="bi bi-database"></i>
+                    </div>
+
+                    <h3>Database</h3>
+
+                    <p>Managing structured data</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg reveal">
+
+                <div class="skill-overview-card">
+
+                    <div class="skill-overview-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+
+                    <h3>Networking</h3>
+
+                    <p>Understanding connectivity</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg reveal">
+
+                <div class="skill-overview-card">
+
+                    <div class="skill-overview-icon">
+                        <i class="bi bi-tools"></i>
+                    </div>
+
+                    <h3>Tools</h3>
+
+                    <p>Working with technology tools</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-12 col-lg reveal">
+
+                <div class="skill-overview-card">
+
+                    <div class="skill-overview-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <h3>Soft Skills</h3>
+
+                    <p>Professional growth and teamwork</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TECHNICAL SKILLS
+========================================================= -->
+
+<section class="technical-section section-padding">
+
+    <div class="container">
+
+        <div class="section-heading text-center reveal">
+
+            <span class="section-label">
+
+                <i class="bi bi-cpu"></i>
+
+                TECHNICAL SKILLS
+
+            </span>
+
+            <h2>
+
+                My Technical
+                <span>Foundation</span>
+
+            </h2>
+
+            <p>
+
+                These are the areas where I am building practical
+                knowledge and continuously improving through practice.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+
+            <!-- Web Technologies -->
+
+            <div class="col-lg-6 reveal">
+
+                <div class="skill-category">
+
+                    <div class="skill-category-header">
+
+                        <div class="skill-category-icon">
+                            <i class="bi bi-globe2"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>Web Technologies</h3>
+
+                            <p>Frontend foundations</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-item">
+
+                        <div class="skill-info">
+
+                            <span class="skill-name">HTML</span>
+
+                            <span class="skill-status">
+                                Strong Foundation
+                            </span>
+
+                        </div>
+
+                        <div class="skill-progress">
+
+                            <div
+                                class="skill-progress-bar"
+                                style="width: 85%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-item">
+
+                        <div class="skill-info">
+
+                            <span class="skill-name">CSS</span>
+
+                            <span class="skill-status">
+                                Developing
+                            </span>
+
+                        </div>
+
+                        <div class="skill-progress">
+
+                            <div
+                                class="skill-progress-bar"
+                                style="width: 80%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-item">
+
+                        <div class="skill-info">
+
+                            <span class="skill-name">JavaScript</span>
+
+                            <span class="skill-status">
+                                Improving
+                            </span>
+
+                        </div>
+
+                        <div class="skill-progress">
+
+                            <div
+                                class="skill-progress-bar"
+                                style="width: 70%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-item">
+
+                        <div class="skill-info">
+
+                            <span class="skill-name">Bootstrap</span>
+
+                            <span class="skill-status">
+                                Developing
+                            </span>
+
+                        </div>
+
+                        <div class="skill-progress">
+
+                            <div
+                                class="skill-progress-bar"
+                                style="width: 78%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Programming -->
+
+            <div class="col-lg-6 reveal">
+
+                <div class="skill-category">
+
+                    <div class="skill-category-header">
+
+                        <div class="skill-category-icon">
+                            <i class="bi bi-terminal"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>Programming</h3>
+
+                            <p>Logic and application development</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-item">
+
+                        <div class="skill-info">
+
+                            <span class="skill-name">PHP</span>
+
+                            <span class="skill-status">
+                                Learning
+                            </span>
+
+                        </div>
+
+                        <div class="skill-progress">
+
+                            <div
+                                class="skill-progress-bar"
+                                style="width: 60%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-item">
+
+                        <div class="skill-info">
+
+                            <span class="skill-name">Java</span>
+
+                            <span class="skill-status">
+                                Learning
+                            </span>
+
+                        </div>
+
+                        <div class="skill-progress">
+
+                            <div
+                                class="skill-progress-bar"
+                                style="width: 55%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-item">
+
+                        <div class="skill-info">
+
+                            <span class="skill-name">Programming Logic</span>
+
+                            <span class="skill-status">
+                                Developing
+                            </span>
+
+                        </div>
+
+                        <div class="skill-progress">
+
+                            <div
+                                class="skill-progress-bar"
+                                style="width: 72%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-item">
+
+                        <div class="skill-info">
+
+                            <span class="skill-name">Problem Solving</span>
+
+                            <span class="skill-status">
+                                Improving
+                            </span>
+
+                        </div>
+
+                        <div class="skill-progress">
+
+                            <div
+                                class="skill-progress-bar"
+                                style="width: 74%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DEVELOPMENT
+========================================================= -->
+
+<section class="development-section section-padding">
+
+    <div class="container">
+
+        <div class="section-heading text-center reveal">
+
+            <span class="section-label">
+
+                <i class="bi bi-window-stack"></i>
+
+                DEVELOPMENT
+
+            </span>
+
+            <h2>
+
+                Building for the
+                <span>Web</span>
+
+            </h2>
+
+            <p>
+
+                I am developing the ability to transform ideas
+                into responsive, functional and user-friendly
+                digital experiences.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="development-card">
+
+                    <div class="development-icon">
+                        <i class="bi bi-layout-text-window-reverse"></i>
+                    </div>
+
+                    <h3>Frontend Development</h3>
+
+                    <p>
+
+                        Creating structured and responsive
+                        interfaces with a focus on usability,
+                        layout and visual presentation.
+
+                    </p>
+
+                    <div class="technology-tags">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="development-card">
+
+                    <div class="development-icon">
+                        <i class="bi bi-server"></i>
+                    </div>
+
+                    <h3>Backend Development</h3>
+
+                    <p>
+
+                        Exploring server-side programming,
+                        application logic, forms, data processing
+                        and system functionality.
+
+                    </p>
+
+                    <div class="technology-tags">
+
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>CRUD</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4 reveal">
+
+                <div class="development-card">
+
+                    <div class="development-icon">
+                        <i class="bi bi-phone"></i>
+                    </div>
+
+                    <h3>Responsive Design</h3>
+
+                    <p>
+
+                        Designing interfaces that adapt across
+                        desktops, tablets and mobile devices.
+
+                    </p>
+
+                    <div class="technology-tags">
+
+                        <span>Bootstrap</span>
+                        <span>CSS</span>
+                        <span>UI Design</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DATABASE
+========================================================= -->
+
+<section class="database-section section-padding">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <div class="col-lg-6 reveal">
+
+                <div class="specialized-card">
+
+                    <div class="specialized-icon">
+
+                        <i class="bi bi-database-check"></i>
+
+                    </div>
+
+                    <h3>
+                        Database Skills
+                    </h3>
+
+                    <p>
+
+                        Developing an understanding of how data
+                        is stored, organized, connected and managed
+                        within information systems.
+
+                    </p>
+
+                    <ul class="specialized-list">
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>MySQL</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>SQL Queries</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Database Design</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>CRUD Operations</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Data Organization</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6 reveal">
+
+                <div class="section-heading mb-0">
+
+                    <span class="section-label">
+
+                        <i class="bi bi-table"></i>
+
+                        DATABASE
+
+                    </span>
+
+                    <h2>
+
+                        Understanding
+                        <span>Data</span>
+
+                    </h2>
+
+                    <p>
+
+                        Database knowledge helps me understand
+                        how applications store information and
+                        how users interact with structured data.
+
+                    </p>
+
+                    <p>
+
+                        My current focus is on building stronger
+                        foundations in SQL, database relationships,
+                        data management and practical system
+                        development.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NETWORKING
+========================================================= -->
+
+<section class="networking-section section-padding">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <div class="col-lg-6 order-lg-2 reveal">
+
+                <div class="specialized-card">
+
+                    <div class="specialized-icon">
+
+                        <i class="bi bi-diagram-3-fill"></i>
+
+                    </div>
+
+                    <h3>
+                        Networking Skills
+                    </h3>
+
+                    <p>
+
+                        Exploring how devices communicate,
+                        exchange information and connect through
+                        computer networks.
+
+                    </p>
+
+                    <ul class="specialized-list">
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Network Fundamentals</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>IP Addressing</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>LAN & WAN Concepts</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Network Troubleshooting</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Basic Network Configuration</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6 order-lg-1 reveal">
+
+                <div class="section-heading mb-0">
+
+                    <span class="section-label">
+
+                        <i class="bi bi-router"></i>
+
+                        NETWORKING
+
+                    </span>
+
+                    <h2>
+
+                        Connecting
+                        <span>Technology</span>
+
+                    </h2>
+
+                    <p>
+
+                        Networking is an important part of
+                        understanding how modern information
+                        systems communicate.
+
+                    </p>
+
+                    <p>
+
+                        I am building practical knowledge in
+                        network concepts, addressing,
+                        connectivity and troubleshooting.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TOOLS
+========================================================= -->
+
+<section class="tools-section section-padding">
+
+    <div class="container">
+
+        <div class="section-heading text-center reveal">
+
+            <span class="section-label">
+
+                <i class="bi bi-wrench-adjustable"></i>
+
+                TOOLS & TECHNOLOGIES
+
+            </span>
+
+            <h2>
+
+                Tools I Use to
+                <span>Build</span>
+
+            </h2>
+
+            <p>
+
+                Software and platforms that support my learning,
+                development and creative workflow.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-3 mt-4">
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="tool-card">
+
+                    <div class="tool-icon">
+                        <i class="bi bi-code-square"></i>
+                    </div>
+
+                    <h3>VS Code</h3>
+
+                    <p>Code Editor</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="tool-card">
+
+                    <div class="tool-icon">
+                        <i class="bi bi-git"></i>
+                    </div>
+
+                    <h3>Git</h3>
+
+                    <p>Version Control</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="tool-card">
+
+                    <div class="tool-icon">
+                        <i class="bi bi-github"></i>
+                    </div>
+
+                    <h3>GitHub</h3>
+
+                    <p>Code Collaboration</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="tool-card">
+
+                    <div class="tool-icon">
+                        <i class="bi bi-hdd-network"></i>
+                    </div>
+
+                    <h3>XAMPP</h3>
+
+                    <p>Local Development</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="tool-card">
+
+                    <div class="tool-icon">
+                        <i class="bi bi-palette"></i>
+                    </div>
+
+                    <h3>Figma</h3>
+
+                    <p>UI Design</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="tool-card">
+
+                    <div class="tool-icon">
+                        <i class="bi bi-image"></i>
+                    </div>
+
+                    <h3>Photoshop</h3>
+
+                    <p>Creative Design</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="tool-card">
+
+                    <div class="tool-icon">
+                        <i class="bi bi-vector-pen"></i>
+                    </div>
+
+                    <h3>Illustrator</h3>
+
+                    <p>Vector Design</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="tool-card">
+
+                    <div class="tool-icon">
+                        <i class="bi bi-browser-chrome"></i>
+                    </div>
+
+                    <h3>DevTools</h3>
+
+                    <p>Web Debugging</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SOFT SKILLS
+========================================================= -->
+
+<section class="soft-skills-section section-padding">
+
+    <div class="container">
+
+        <div class="section-heading text-center reveal">
+
+            <span class="section-label">
+
+                <i class="bi bi-people"></i>
+
+                SOFT SKILLS
+
+            </span>
+
+            <h2>
+
+                Skills Beyond
+                <span>Technology</span>
+
+            </h2>
+
+            <p>
+
+                Technical ability becomes more valuable when
+                combined with strong professional and personal skills.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="soft-skill-card">
+
+                    <i class="bi bi-lightbulb"></i>
+
+                    <h3>Creativity</h3>
+
+                    <p>
+                        Finding creative ways to approach ideas
+                        and digital solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="soft-skill-card">
+
+                    <i class="bi bi-puzzle"></i>
+
+                    <h3>Problem Solving</h3>
+
+                    <p>
+                        Breaking problems into smaller and
+                        manageable solutions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="soft-skill-card">
+
+                    <i class="bi bi-chat-dots"></i>
+
+                    <h3>Communication</h3>
+
+                    <p>
+                        Sharing ideas clearly and working
+                        effectively with others.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="soft-skill-card">
+
+                    <i class="bi bi-people-fill"></i>
+
+                    <h3>Teamwork</h3>
+
+                    <p>
+                        Collaborating with others toward
+                        shared goals.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="soft-skill-card">
+
+                    <i class="bi bi-clock"></i>
+
+                    <h3>Time Management</h3>
+
+                    <p>
+                        Organizing tasks and making effective
+                        use of available time.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="soft-skill-card">
+
+                    <i class="bi bi-arrow-repeat"></i>
+
+                    <h3>Adaptability</h3>
+
+                    <p>
+                        Learning and adjusting to new tools,
+                        technologies and situations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="soft-skill-card">
+
+                    <i class="bi bi-search"></i>
+
+                    <h3>Critical Thinking</h3>
+
+                    <p>
+                        Evaluating information and considering
+                        practical approaches.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+
+                <div class="soft-skill-card">
+
+                    <i class="bi bi-book"></i>
+
+                    <h3>Continuous Learning</h3>
+
+                    <p>
+                        Staying curious and continuously
+                        developing new abilities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LEARNING PROGRESS
+========================================================= -->
+
+<section class="progress-section section-padding">
+
+    <div class="container">
+
+        <div class="section-heading text-center reveal">
+
+            <span class="section-label">
+
+                <i class="bi bi-graph-up-arrow"></i>
+
+                LEARNING PROGRESS
+
+            </span>
+
+            <h2>
+
+                Where I Am
+                <span>Growing</span>
+
+            </h2>
+
+            <p>
+
+                These indicators represent my current learning
+                progress and are not certifications or claims
+                of professional expertise.
+
+            </p>
+
+        </div>
+
+
+        <div class="progress-wrapper">
+
+
+            <div class="learning-progress-card reveal">
+
+                <div class="learning-progress-top">
+
+                    <div class="learning-progress-name">
+
+                        <i class="bi bi-filetype-html"></i>
+
+                        HTML
+
+                    </div>
+
+                    <span class="learning-progress-value">
+                        85%
+                    </span>
+
+                </div>
+
+                <div class="learning-track">
+
+                    <div
+                        class="learning-fill"
+                        style="width: 85%;">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-progress-card reveal">
+
+                <div class="learning-progress-top">
+
+                    <div class="learning-progress-name">
+
+                        <i class="bi bi-filetype-css"></i>
+
+                        CSS
+
+                    </div>
+
+                    <span class="learning-progress-value">
+                        80%
+                    </span>
+
+                </div>
+
+                <div class="learning-track">
+
+                    <div
+                        class="learning-fill"
+                        style="width: 80%;">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-progress-card reveal">
+
+                <div class="learning-progress-top">
+
+                    <div class="learning-progress-name">
+
+                        <i class="bi bi-filetype-js"></i>
+
+                        JavaScript
+
+                    </div>
+
+                    <span class="learning-progress-value">
+                        70%
+                    </span>
+
+                </div>
+
+                <div class="learning-track">
+
+                    <div
+                        class="learning-fill"
+                        style="width: 70%;">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-progress-card reveal">
+
+                <div class="learning-progress-top">
+
+                    <div class="learning-progress-name">
+
+                        <i class="bi bi-database"></i>
+
+                        MySQL
+
+                    </div>
+
+                    <span class="learning-progress-value">
+                        68%
+                    </span>
+
+                </div>
+
+                <div class="learning-track">
+
+                    <div
+                        class="learning-fill"
+                        style="width: 68%;">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-progress-card reveal">
+
+                <div class="learning-progress-top">
+
+                    <div class="learning-progress-name">
+
+                        <i class="bi bi-filetype-php"></i>
+
+                        PHP
+
+                    </div>
+
+                    <span class="learning-progress-value">
+                        60%
+                    </span>
+
+                </div>
+
+                <div class="learning-track">
+
+                    <div
+                        class="learning-fill"
+                        style="width: 60%;">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-progress-card reveal">
+
+                <div class="learning-progress-top">
+
+                    <div class="learning-progress-name">
+
+                        <i class="bi bi-diagram-3"></i>
+
+                        Networking
+
+                    </div>
+
+                    <span class="learning-progress-value">
+                        58%
+                    </span>
+
+                </div>
+
+                <div class="learning-track">
+
+                    <div
+                        class="learning-fill"
+                        style="width: 58%;">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-note reveal">
+
+                <i class="bi bi-info-circle me-2"></i>
+
+                Progress levels change as I practice, build projects,
+                learn new concepts and gain more practical experience.
+                The goal is continuous improvement.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CURRENT FOCUS
+========================================================= -->
+
+<section class="focus-section section-padding">
+
+    <div class="container">
+
+        <div class="focus-box reveal">
+
+            <div class="focus-content">
+
+                <span class="section-label">
+
+                    <i class="bi bi-bullseye"></i>
+
+                    CURRENT FOCUS
+
+                </span>
+
+                <h2 class="section-title">
+
+                    What I Am
+                    <span>Working On</span>
+
+                </h2>
+
+                <p>
+
+                    At this stage of my journey, I am focusing on
+                    strengthening my web development, programming,
+                    database and system development skills through
+                    practical projects and continuous learning.
+
+                </p>
+
+
+                <div class="focus-items">
+
+                    <span>
+                        Web Development
+                    </span>
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <span>
+                        PHP
+                    </span>
+
+                    <span>
+                        MySQL
+                    </span>
+
+                    <span>
+                        System Development
+                    </span>
+
+                    <span>
+                        Problem Solving
+                    </span>
+
+                    <span>
+                        UI Design
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="skills-cta">
+
+    <div class="container">
+
+        <div class="cta-box reveal">
+
+            <div class="cta-content">
+
+                <span class="section-label">
+
+                    <i class="bi bi-stars"></i>
+
+                    KEEP LEARNING
+
+                </span>
+
+                <h2>
+
+                    Skills grow through
+                    <span>practice.</span>
+
+                </h2>
+
+                <p>
+
+                    Explore my projects and journey to see how
+                    I am turning what I learn into practical
+                    technology work.
+
+                </p>
+
+                <div class="d-flex flex-wrap gap-3">
+
+                    <a
+                        href="projects.html"
+                        class="btn btn-primary-vipm">
+
+                        View My Projects
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                    <a
+                        href="journey.html"
+                        class="btn btn-outline-vipm">
+
+                        My Journey
+
+                        <i class="bi bi-signpost-split"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="cta-decoration">
+
+                <i class="bi bi-code-square"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <!-- Brand -->
+
+            <div class="col-lg-5">
+
+                <a
+                    href="index.html"
+                    class="vipm-brand footer-brand">
+
+                    <span class="brand-icon">
+
+                        <i class="bi bi-code-slash"></i>
+
+                    </span>
+
+                    <span class="brand-text">
+
+                        VIPM<span>TECHJOURNEY</span>
+
+                    </span>
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    A personal IT journey focused on learning,
+                    building, exploring technology and preparing
+                    for the future.
+
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#" aria-label="GitHub">
+                        <i class="bi bi-github"></i>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a
+                        href="https://wa.me/255786459085"
+                        target="_blank"
+                        aria-label="WhatsApp">
+
+                        <i class="bi bi-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Links -->
+
+            <div class="col-6 col-lg-3">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="journey.html">
+                            My Journey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="skills.html">
+                            Skills
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="projects.html">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="col-6 col-lg-4">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <ul class="footer-contact">
+
+                    <li>
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        <span>
+                            NIT, Mabibo,<br>
+                            Dar es Salaam, Tanzania
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        <i class="bi bi-envelope"></i>
+
+                        <a href="mailto:vipmmaranatha03@gmail.com">
+                            vipmmaranatha03@gmail.com
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <i class="bi bi-telephone"></i>
+
+                        <a href="tel:+255786459085">
+                            0786459085
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © <span id="currentYear"></span>
+                VIPM TECHJOURNEY.
+                All Rights Reserved.
+
+            </p>
+
+            <p>
+
+                Learning today.
+                Building tomorrow.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     SCROLL TOP
+========================================================= -->
+
+<button
+    id="scrollTopBtn"
+    class="scroll-top"
+    aria-label="Scroll to top">
+
+    <i class="bi bi-arrow-up"></i>
+
+</button>
+
+<!-- Bootstrap JS -->
+<script src="assets/font/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Main JavaScript -->
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
