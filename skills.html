@@ -26,24 +26,12 @@
 
         .skills-hero {
             position: relative;
-            min-height: 65vh;
+            min-height: 70vh;
             display: flex;
             align-items: center;
             overflow: hidden;
             padding-top: 110px;
-
-            background:
-                radial-gradient(
-                    circle at 82% 25%,
-                    rgba(37, 99, 235, 0.17),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 15% 75%,
-                    rgba(6, 182, 212, 0.09),
-                    transparent 30%
-                ),
-                var(--dark-navy);
+            background: radial-gradient(circle at 82% 25%, rgba(37, 99, 235, 0.17), transparent 30%), radial-gradient(circle at 15% 75%, rgba(6, 182, 212, 0.09), transparent 30%), var(--dark-navy);
         }
 
         .skills-hero-content {
@@ -80,21 +68,17 @@
         .skills-overview {
             position: relative;
             z-index: 5;
-            margin-top: -55px;
+            margin-top: -60px;
         }
 
         .skill-overview-card {
             height: 100%;
             padding: 28px 20px;
             text-align: center;
-
             border: 1px solid var(--border);
             border-radius: 16px;
-
             background: rgba(17, 28, 49, 0.92);
-
             backdrop-filter: blur(15px);
-
             transition: var(--transition);
         }
 
@@ -105,20 +89,16 @@
         }
 
         .skill-overview-icon {
-            width: 55px;
-            height: 55px;
+            width: 60px;
+            height: 60px;
             margin: 0 auto 15px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             border-radius: 14px;
-
             color: var(--cyan);
             background: rgba(6, 182, 212, 0.08);
-
-            font-size: 23px;
+            font-size: 38px;
         }
 
         .skill-overview-card h3 {
@@ -129,7 +109,7 @@
         .skill-overview-card p {
             margin: 0;
             color: var(--text-muted);
-            font-size: 13px;
+            font-size: 14px;
         }
 
 
@@ -144,12 +124,9 @@
         .skill-category {
             height: 100%;
             padding: 30px;
-
             border: 1px solid var(--border);
             border-radius: 18px;
-
             background: rgba(17, 28, 49, 0.45);
-
             transition: var(--transition);
         }
 
@@ -167,21 +144,16 @@
         }
 
         .skill-category-icon {
-            width: 50px;
-            height: 50px;
-
+            width: 58px;
+            height: 58px;
             flex-shrink: 0;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             border-radius: 13px;
-
             background: rgba(37, 99, 235, 0.1);
             color: var(--cyan);
-
-            font-size: 21px;
+            font-size: 36px;
         }
 
         .skill-category-header h3 {
@@ -224,7 +196,7 @@
         .skill-status {
             color: var(--cyan);
             font-size: 10px;
-            font-weight: 800;
+            font-weight: 600;
             letter-spacing: 0.6px;
             text-transform: uppercase;
         }
@@ -239,14 +211,7 @@
         .skill-progress-bar {
             height: 100%;
             border-radius: 50px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    var(--electric-blue),
-                    var(--cyan)
-                );
-
+            background: linear-gradient(90deg, var(--electric-blue), var(--cyan));
             box-shadow: 0 0 12px rgba(6, 182, 212, 0.25);
         }
 
@@ -262,12 +227,9 @@
         .development-card {
             height: 100%;
             padding: 32px;
-
             border: 1px solid var(--border);
             border-radius: 18px;
-
             background: rgba(11, 18, 32, 0.55);
-
             transition: var(--transition);
         }
 
@@ -277,21 +239,16 @@
         }
 
         .development-icon {
-            width: 55px;
-            height: 55px;
-
+            width: 60px;
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
-
             margin-bottom: 18px;
-
             border-radius: 14px;
-
             background: rgba(37, 99, 235, 0.1);
             color: var(--cyan);
-
-            font-size: 23px;
+            font-size: 36px;
         }
 
         .development-card h3 {
@@ -314,14 +271,11 @@
 
         .technology-tags span {
             padding: 5px 9px;
-
             border-radius: 6px;
-
             background: rgba(6, 182, 212, 0.07);
             color: var(--cyan-light);
-
-            font-size: 10px;
-            font-weight: 700;
+            font-size: 11px;
+            font-weight: 600;
         }
 
 
@@ -340,17 +294,9 @@
         .specialized-card {
             height: 100%;
             padding: 35px;
-
             border: 1px solid var(--border);
             border-radius: 18px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(37, 99, 235, 0.07),
-                    rgba(6, 182, 212, 0.025)
-                );
-
+            background: linear-gradient(145deg, rgba(37, 99, 235, 0.07), rgba(6, 182, 212, 0.025));
             transition: var(--transition);
         }
 
@@ -360,20 +306,15 @@
         }
 
         .specialized-icon {
-            width: 58px;
-            height: 58px;
-
+            width: 60px;
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
-
             border-radius: 15px;
-
             background: rgba(6, 182, 212, 0.08);
             color: var(--cyan);
-
-            font-size: 25px;
-
+            font-size: 36px;
             margin-bottom: 20px;
         }
 
@@ -419,14 +360,10 @@
         .tool-card {
             height: 100%;
             padding: 25px;
-
             border: 1px solid var(--border);
             border-radius: 15px;
-
             background: rgba(17, 28, 49, 0.45);
-
             text-align: center;
-
             transition: var(--transition);
         }
 
@@ -436,20 +373,15 @@
         }
 
         .tool-icon {
-            width: 52px;
-            height: 52px;
-
+            width: 60px;
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
-
             margin: 0 auto 14px;
-
             border-radius: 13px;
-
             background: rgba(37, 99, 235, 0.1);
             color: var(--cyan);
-
             font-size: 22px;
         }
 
@@ -476,12 +408,9 @@
         .soft-skill-card {
             height: 100%;
             padding: 27px;
-
             border: 1px solid var(--border);
             border-radius: 16px;
-
             background: rgba(11, 18, 32, 0.5);
-
             transition: var(--transition);
         }
 
@@ -493,7 +422,7 @@
         .soft-skill-card i {
             display: block;
             color: var(--cyan);
-            font-size: 25px;
+            font-size: 38px;
             margin-bottom: 15px;
         }
 
@@ -525,14 +454,10 @@
 
         .learning-progress-card {
             padding: 28px;
-
             border: 1px solid var(--border);
             border-radius: 17px;
-
             background: rgba(17, 28, 49, 0.45);
-
             margin-bottom: 16px;
-
             transition: var(--transition);
         }
 
@@ -551,7 +476,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-
             font-size: 14px;
             font-weight: 700;
         }
@@ -569,35 +493,24 @@
         .learning-track {
             height: 7px;
             overflow: hidden;
-
             border-radius: 50px;
-
             background: rgba(255, 255, 255, 0.06);
         }
 
         .learning-fill {
             height: 100%;
             border-radius: 50px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    var(--electric-blue),
-                    var(--cyan)
-                );
+            background: linear-gradient(90deg, var(--electric-blue), var(--cyan));
         }
 
         .learning-note {
             margin-top: 35px;
             padding: 20px;
-
             border-left: 3px solid var(--cyan);
             border-radius: 8px;
-
             background: rgba(6, 182, 212, 0.05);
-
             color: var(--text-muted);
-            font-size: 13px;
+            font-size: 14px;
             line-height: 1.7;
         }
 
@@ -613,35 +526,21 @@
         .focus-box {
             position: relative;
             overflow: hidden;
-
             padding: 50px;
-
             border: 1px solid var(--border);
             border-radius: 20px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(37, 99, 235, 0.09),
-                    rgba(6, 182, 212, 0.035)
-                );
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.09), rgba(6, 182, 212, 0.035));
         }
 
         .focus-box::after {
             content: "";
-
             position: absolute;
-
             width: 250px;
             height: 250px;
-
             right: -90px;
             top: -100px;
-
             border-radius: 50%;
-
             background: rgba(6, 182, 212, 0.07);
-
             filter: blur(4px);
         }
 
@@ -656,7 +555,6 @@
 
         .focus-content p {
             max-width: 700px;
-
             color: var(--text-muted);
             line-height: 1.8;
         }
@@ -670,15 +568,12 @@
 
         .focus-items span {
             padding: 8px 13px;
-
             border: 1px solid rgba(6, 182, 212, 0.15);
             border-radius: 7px;
-
             color: var(--cyan-light);
             background: rgba(6, 182, 212, 0.06);
-
-            font-size: 11px;
-            font-weight: 700;
+            font-size: 12px;
+            font-weight: 600;
         }
 
 
@@ -697,7 +592,6 @@
         ===================================================== */
 
         @media (max-width: 767px) {
-
             .skills-hero {
                 min-height: 65vh;
             }
@@ -723,7 +617,6 @@
             .learning-progress-card {
                 padding: 22px;
             }
-
         }
 
     </style>
