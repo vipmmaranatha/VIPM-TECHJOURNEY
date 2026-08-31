@@ -302,289 +302,281 @@
         }
 
 
-/* =====================================================
-     PROJECT CARDS
-===================================================== */
+        /* =====================================================
+            PROJECT CARDS
+        ===================================================== */
 
-.projects-section {
-    background: var(--dark-navy-light);
-}
+        .projects-section {
+            background: var(--dark-navy-light);
+        }
 
-.project-card {
-    height: 100%;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    background: rgba(11, 18, 32, 0.55);
-    transition: var(--transition);
-}
+        .project-card {
+            height: 100%;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: rgba(11, 18, 32, 0.55);
+            transition: var(--transition);
+        }
 
-.project-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(37, 99, 235, 0.4);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-}
-
-
-/* =====================================================
-   PROJECT VISUAL
-===================================================== */
-
-.project-card-visual {
-    height: 300px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: radial-gradient(
-        circle at center,
-        rgba(37, 99, 235, 0.14),
-        transparent 55%
-    ), rgba(7, 14, 27, 0.75);
-}
-
-.project-image {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.project-card:hover .project-image {
-    transform: scale(1.06);
-}
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(37, 99, 235, 0.4);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
 
 
-/* =====================================================
-   PROJECT OVERLAY
-===================================================== */
+        /* =====================================================
+        PROJECT VISUAL
+        ===================================================== */
 
-.project-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(
-        to bottom,
-        rgba(11, 18, 32, 0.25),
-        rgba(11, 18, 32, 0.88)
-    );
-}
+        .project-card-visual {
+            height: 300px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: radial-gradient(circle at center, rgba(37, 99, 235, 0.14), transparent 55%), rgba(7, 14, 27, 0.75);
+        }
 
+        .project-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
 
-/* =====================================================
-   PROJECT ICON
-===================================================== */
-
-.project-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translate(-50%, -50%);
-    border: 1px solid rgba(6, 182, 212, 0.35);
-    border-radius: 18px;
-    background: rgba(11, 18, 32, 0.72);
-    backdrop-filter: blur(8px);
-    color: var(--cyan);
-    transition: var(--transition);
-}
-
-.project-icon i {
-    font-size: 35px;
-    color: var(--cyan);
-    filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.25));
-    transition: var(--transition);
-}
-
-.project-card:hover .project-icon {
-    transform: translate(-50%, -50%) scale(1.08);
-    border-color: rgba(6, 182, 212, 0.7);
-    background: rgba(37, 99, 235, 0.25);
-}
-
-.project-card:hover .project-icon i {
-    transform: scale(1.08);
-}
+        .project-card:hover .project-image {
+            transform: scale(1.06);
+        }
 
 
-/* =====================================================
-   PROJECT NUMBER
-===================================================== */
+        /* =====================================================
+        PROJECT OVERLAY
+        ===================================================== */
 
-.project-card-number {
-    position: absolute;
-    top: 15px;
-    left: 16px;
-    z-index: 3;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
+        .project-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(to bottom, rgba(11, 18, 32, 0.25), rgba(11, 18, 32, 0.88));
+        }
 
 
-/* =====================================================
-   PROJECT TYPE
-===================================================== */
+        /* =====================================================
+        PROJECT ICON
+        ===================================================== */
 
-.project-card-type {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    z-index: 3;
-    padding: 5px 9px;
-    border: 1px solid rgba(6, 182, 212, 0.15);
-    border-radius: 5px;
-    background: rgba(6, 182, 212, 0.12);
-    color: var(--cyan);
-    font-size: 13px;
-    font-weight: 800;
-    text-transform: uppercase;
-}
+        .project-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-50%, -50%);
+            border: 1px solid rgba(6, 182, 212, 0.35);
+            border-radius: 18px;
+            background: rgba(11, 18, 32, 0.72);
+            backdrop-filter: blur(8px);
+            color: var(--cyan);
+            transition: var(--transition);
+        }
 
+        .project-icon i {
+            font-size: 35px;
+            color: var(--cyan);
+            filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.25));
+            transition: var(--transition);
+        }
 
-/* =====================================================
-   PROJECT CONTENT
-===================================================== */
+        .project-card:hover .project-icon {
+            transform: translate(-50%, -50%) scale(1.08);
+            border-color: rgba(6, 182, 212, 0.7);
+            background: rgba(37, 99, 235, 0.25);
+        }
 
-.project-card-content {
-    padding: 26px;
-}
-
-.project-card-content h3 {
-    font-size: 20px;
-    margin-bottom: 9px;
-}
-
-.project-card-content p {
-    color: var(--text-muted);
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 18px;
-}
-
-
-/* =====================================================
-   PROJECT TAGS
-===================================================== */
-
-.project-card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 22px;
-}
-
-.project-card-tags span {
-    padding: 4px 8px;
-    border-radius: 5px;
-    background: rgba(37, 99, 235, 0.08);
-    color: var(--electric-blue-light);
-    font-size: 12px;
-    font-weight: 600;
-}
+        .project-card:hover .project-icon i {
+            transform: scale(1.08);
+        }
 
 
-/* =====================================================
-   PROJECT ACTIONS
-===================================================== */
+        /* =====================================================
+            PROJECT NUMBER
+        ===================================================== */
 
-.project-card-actions {
-    display: flex;
-    gap: 8px;
-}
-
-.project-card-actions a {
-    flex: 1;
-    padding: 9px 10px;
-    border-radius: 7px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: var(--transition);
-}
+        .project-card-number {
+            position: absolute;
+            top: 15px;
+            left: 16px;
+            z-index: 3;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
 
 
-/* =====================================================
-   VIEW PROJECT
-===================================================== */
+        /* =====================================================
+        PROJECT TYPE
+        ===================================================== */
 
-.project-view {
-    background: var(--cyan);
-    color: var(--dark-navy);
-}
-
-.project-view:hover {
-    color: var(--dark-navy);
-    transform: translateY(-2px);
-}
-
-
-/* =====================================================
-   PROJECT CODE
-===================================================== */
-
-.project-code {
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--text-light);
-}
-
-.project-code:hover {
-    border-color: var(--cyan);
-    color: var(--cyan);
-}
+        .project-card-type {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            z-index: 3;
+            padding: 5px 9px;
+            border: 1px solid rgba(6, 182, 212, 0.15);
+            border-radius: 5px;
+            background: rgba(6, 182, 212, 0.12);
+            color: var(--cyan);
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
 
 
-/* =====================================================
-   RESPONSIVE
-===================================================== */
+        /* =====================================================
+        PROJECT CONTENT
+        ===================================================== */
 
-@media (max-width: 767px) {
-    .project-card-visual {
-        height: 260px;
-    }
+        .project-card-content {
+            padding: 26px;
+        }
 
-    .project-icon {
-        width: 62px;
-        height: 62px;
-    }
+        .project-card-content h3 {
+            font-size: 20px;
+            margin-bottom: 9px;
+        }
 
-    .project-icon i {
-        font-size: 30px;
-    }
-
-    .project-card-content {
-        padding: 22px;
-    }
-
-}
+        .project-card-content p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
 
 
-@media (max-width: 480px) {
+        /* =====================================================
+        PROJECT TAGS
+        ===================================================== */
 
-    .project-card-visual {
-        height: 230px;
-    }
+        .project-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 22px;
+        }
 
-    .project-card-actions {
-        flex-direction: column;
-    }
+        .project-card-tags span {
+            padding: 4px 8px;
+            border-radius: 5px;
+            background: rgba(37, 99, 235, 0.08);
+            color: var(--electric-blue-light);
+            font-size: 12px;
+            font-weight: 600;
+        }
 
-    .project-card-actions a {
-        width: 100%;
-    }
-}
+
+        /* =====================================================
+        PROJECT ACTIONS
+        ===================================================== */
+
+        .project-card-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .project-card-actions a {
+            flex: 1;
+            padding: 9px 10px;
+            border-radius: 7px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+
+        /* =====================================================
+        VIEW PROJECT
+        ===================================================== */
+
+        .project-view {
+            background: var(--cyan);
+            color: var(--dark-navy);
+        }
+
+        .project-view:hover {
+            color: var(--dark-navy);
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+        PROJECT CODE
+        ===================================================== */
+
+        .project-code {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-light);
+        }
+
+        .project-code:hover {
+            border-color: var(--cyan);
+            color: var(--cyan);
+        }
+
+
+        /* =====================================================
+        RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 767px) {
+            .project-card-visual {
+                height: 260px;
+            }
+
+            .project-icon {
+                width: 62px;
+                height: 62px;
+            }
+
+            .project-icon i {
+                font-size: 30px;
+            }
+
+            .project-card-content {
+                padding: 22px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .project-card-visual {
+                height: 230px;
+            }
+
+            .project-card-actions {
+                flex-direction: column;
+            }
+
+            .project-card-actions a {
+                width: 100%;
+            }
+        }
 
 
         /* =====================================================
@@ -760,64 +752,22 @@
     <div class="container">
 
         <!-- Brand -->
-        <a class="navbar-brand vipm-brand" href="index.html"><img src="assets/img/logo/Tech journey-01.png" alt="VIPM TECHJOURNEY Logo" class="vipm-logo"></a>
-
-
-
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainNavbar"
-            aria-controls="mainNavbar"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
+        <a class="navbar-brand vipm-brand" href="index.html"><img src="assets/img/logo/Tech journey-01.png" alt="VIPM TECHJOURNEY Logo" class="vipm-logo"></a> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
         <div class="collapse navbar-collapse" id="mainNavbar">
 
             <ul class="navbar-nav ms-auto align-items-lg-center">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="journey.html">
-                        My Journey
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="skills.html">
-                        Skills
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="projects.html">
-                        Projects
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link nav-contact" href="contact.html">
-                        Contact
-                    </a>
-                </li>
-
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="journey.html">My Journey</a></li>
+                <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                <li class="nav-item"><a class="nav-link nav-contact" href="contact.html">Contact</a></li>
             </ul>
 
         </div>
 
     </div>
-
 </nav>
 
 
@@ -826,47 +776,18 @@
 ========================================================= -->
 
 <section class="projects-hero">
-
     <div class="hero-grid"></div>
-
     <div class="tech-circle circle-one"></div>
-
     <div class="tech-circle circle-two"></div>
-
     <div class="tech-glow glow-one"></div>
-
     <div class="tech-glow glow-two"></div>
 
-
     <div class="container">
-
         <div class="projects-hero-content reveal">
-
-            <span class="section-label">
-
-                <i class="bi bi-kanban"></i>
-
-                MY PROJECTS
-
-            </span>
-
-            <h1>
-
-                Ideas Into
-                <span>Technology.</span>
-
-            </h1>
-
-            <p>
-
-                A collection of academic, personal and practical
-                projects built while learning Information Technology
-                and exploring how technology can solve real problems.
-
-            </p>
-
+            <span class="section-label"><i class="bi bi-kanban"></i>MY PROJECTS</span>
+            <h1>Ideas Into <span>Technology.</span></h1>
+            <p>A collection of academic, personal and practical projects built while learning Information Technology and exploring how technology can solve real problems.</p>
         </div>
-
     </div>
 
 </section>
@@ -882,80 +803,36 @@
 
         <div class="row g-3">
 
-
             <div class="col-6 col-lg-3 reveal">
-
                 <div class="project-stat-card">
-
-                    <div class="project-stat-icon">
-                        <i class="bi bi-code-square"></i>
-                    </div>
-
+                    <div class="project-stat-icon"><i class="bi bi-code-square"></i></div>
                     <h3>Web Projects</h3>
-
-                    <p>
-                        Websites & interfaces
-                    </p>
-
+                    <p>Websites & interfaces</p>
                 </div>
-
             </div>
 
-
             <div class="col-6 col-lg-3 reveal">
-
                 <div class="project-stat-card">
-
-                    <div class="project-stat-icon">
-                        <i class="bi bi-database"></i>
-                    </div>
-
+                    <div class="project-stat-icon"><i class="bi bi-database"></i></div>
                     <h3>Systems</h3>
-
-                    <p>
-                        Data-driven applications
-                    </p>
-
+                    <p>Data-driven applications</p>
                 </div>
-
             </div>
 
-
             <div class="col-6 col-lg-3 reveal">
-
                 <div class="project-stat-card">
-
-                    <div class="project-stat-icon">
-                        <i class="bi bi-mortarboard"></i>
-                    </div>
-
+                    <div class="project-stat-icon"><i class="bi bi-mortarboard"></i></div>
                     <h3>Academic</h3>
-
-                    <p>
-                        Learning-based projects
-                    </p>
-
+                    <p>Learning-based projects</p>
                 </div>
-
             </div>
 
-
             <div class="col-6 col-lg-3 reveal">
-
                 <div class="project-stat-card">
-
-                    <div class="project-stat-icon">
-                        <i class="bi bi-lightbulb"></i>
-                    </div>
-
+                    <div class="project-stat-icon"><i class="bi bi-lightbulb"></i></div>
                     <h3>Experiments</h3>
-
-                    <p>
-                        Ideas & exploration
-                    </p>
-
+                    <p>Ideas & exploration</p>
                 </div>
-
             </div>
 
         </div>
@@ -974,29 +851,13 @@
     <div class="container">
 
         <div class="section-heading text-center reveal">
-
-            <span class="section-label">
-
-                <i class="bi bi-star"></i>
-
-                FEATURED PROJECT
-
-            </span>
-
-            <h2>
-
-                A Project That
-                <span>Represents My Growth</span>
-
-            </h2>
-
+            <span class="section-label"><i class="bi bi-star"></i>FEATURED PROJECT</span>
+            <h2>A Project That <span>Represents My Growth</span></h2>
         </div>
-
 
         <div class="featured-project mt-5 reveal">
 
             <div class="row g-0 align-items-stretch">
-
 
                 <!-- Visual -->
 
@@ -1007,80 +868,44 @@
                         <div class="featured-code-window">
 
                             <div class="code-window-top">
-
                                 <span class="code-dot"></span>
                                 <span class="code-dot"></span>
                                 <span class="code-dot"></span>
-
-                                <span class="code-window-title">
-                                    project.html
-                                </span>
-
+                                <span class="code-window-title">project.html</span>
                             </div>
 
-
                             <div class="code-content">
-
                                 <div>
-                                    <span class="code-blue">
-                                        &lt;section
-                                    </span>
-                                    <span class="code-cyan">
-                                        class
-                                    </span>=
-                                    <span class="code-white">
-                                        "project"
-                                    </span>
-                                    <span class="code-blue">
-                                        &gt;
-                                    </span>
+                                    <span class="code-blue">&lt;section</span>
+                                    <span class="code-cyan">class</span>=
+                                    <span class="code-white">"project"</span>
+                                    <span class="code-blue">&gt;</span>
                                 </div>
 
                                 <div>
                                     &nbsp;&nbsp;
-                                    <span class="code-blue">
-                                        &lt;h1&gt;
-                                    </span>
-                                    <span class="code-white">
-                                        Build.
-                                    </span>
-                                    <span class="code-blue">
-                                        &lt;/h1&gt;
-                                    </span>
+                                    <span class="code-blue">&lt;h1&gt;</span>
+                                    <span class="code-white">Build.</span>
+                                    <span class="code-blue">&lt;/h1&gt;</span>
                                 </div>
 
                                 <div>
                                     &nbsp;&nbsp;
-                                    <span class="code-blue">
-                                        &lt;p&gt;
-                                    </span>
-                                    <span class="code-white">
-                                        Learn.
-                                    </span>
-                                    <span class="code-blue">
-                                        &lt;/p&gt;
-                                    </span>
+                                    <span class="code-blue">&lt;p&gt;</span>
+                                    <span class="code-white">Learn.</span>
+                                    <span class="code-blue">&lt;/p&gt;</span>
                                 </div>
 
                                 <div>
                                     &nbsp;&nbsp;
-                                    <span class="code-blue">
-                                        &lt;p&gt;
-                                    </span>
-                                    <span class="code-white">
-                                        Improve.
-                                    </span>
-                                    <span class="code-blue">
-                                        &lt;/p&gt;
-                                    </span>
+                                    <span class="code-blue">&lt;p&gt;</span>
+                                    <span class="code-white">Improve.</span>
+                                    <span class="code-blue">&lt;/p&gt;</span>
                                 </div>
 
                                 <div>
-                                    <span class="code-blue">
-                                        &lt;/section&gt;
-                                    </span>
+                                    <span class="code-blue">&lt;/section&gt;</span>
                                 </div>
-
                             </div>
 
                         </div>
@@ -1095,41 +920,10 @@
                 <div class="col-lg-6">
 
                     <div class="featured-content">
-
-                        <span class="project-status">
-
-                            <i class="bi bi-circle-fill"></i>
-
-                            In Progress
-
-                        </span>
-
-
-                        <h2>
-                            VIPM TECHJOURNEY
-                        </h2>
-
-
-                        <p>
-
-                            A personal portfolio and learning
-                            platform designed to document my
-                            Information Technology journey, skills,
-                            projects and professional growth.
-
-                        </p>
-
-
-                        <p>
-
-                            The project combines responsive web
-                            design, structured content and modern
-                            interface development into one practical
-                            learning experience.
-
-                        </p>
-
-
+                        <span class="project-status"><i class="bi bi-circle-fill"></i>In Progress</span>
+                        <h2>VIPM TECHJOURNEY</h2>
+                        <p>A personal portfolio and learning platform designed to document my Information Technology journey, skills, projects and professional growth. </p>
+                        <p>The project combines responsive web design, structured content and modern interface development into one practical learning experience.</p>
                         <div class="project-tech">
                             <span>HTML</span>
                             <span>CSS</span>
@@ -1138,31 +932,10 @@
                             <span>Responsive Design</span>
                         </div>
 
-
                         <div class="d-flex flex-wrap gap-2">
-
-                            <a
-                                href="#"
-                                class="btn btn-primary-vipm">
-
-                                View Project
-
-                                <i class="bi bi-arrow-right"></i>
-
-                            </a>
-
-                            <a
-                                href="#"
-                                class="btn btn-outline-vipm">
-
-                                Source Code
-
-                                <i class="bi bi-github"></i>
-
-                            </a>
-
+                            <a href="#" class="btn btn-primary-vipm">View Project<i class="bi bi-arrow-right"></i></a>
+                            <a href="#"class="btn btn-outline-vipm">Source Code<i class="bi bi-github"></i></a>
                         </div>
-
                     </div>
 
                 </div>
@@ -1208,70 +981,32 @@
 
         <div class="row g-4" id="projectsGrid">
 
-
             <!-- =================================================
                  PROJECT 01
             ================================================== -->
 
             <div class="col-md-6 col-lg-4 project-item" data-category="web">
-
                 <div class="project-card">
-
                     <div class="project-card-visual">
-
-                        <img
-                            src="assets/img/projects/images.jpg"
-                            alt="Personal Portfolio Project"
-                            class="project-image"
-                        >
-
+                        <img src="assets/img/projects/images.jpg" alt="Personal Portfolio Project" class="project-image">
                         <div class="project-overlay"></div>
-
-                        <span class="project-card-number">PROJECT 01
-                            <span class="project-card-type">Web</span>
-                        </span>
-
-                        <div class="project-icon">
-                            <i class="bi bi-globe2"></i>
-                        </div>
-
+                        <span class="project-card-number">PROJECT 01<span class="project-card-type">Web</span></span>
+                        <div class="project-icon"><i class="bi bi-globe2"></i></div>
                     </div>
-
-
+  
                     <div class="project-card-content">
-
-                        <h3>
-                            Personal Portfolio
-                        </h3>
-
-                        <p>
-                            A responsive personal website created
-                            to present skills, projects, journey
-                            and professional information.
-                        </p>
-
-
+                        <h3>Personal Portfolio</h3>
+                        <p>A responsive personal website created to present skills, projects, journey and professional information.</p>
                         <div class="project-card-tags">
-
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                             <span>Bootstrap</span>
-
                         </div>
 
-
                         <div class="project-card-actions">
-
-                            <a href="#" class="project-view">
-                                View Project
-                            </a>
-
-                            <a href="#" class="project-code">
-                                <i class="bi bi-github"></i>
-                                Code
-                            </a>
-
+                            <a href="#" class="project-view">View Project</a>
+                            <a href="#" class="project-code"><i class="bi bi-github"></i>Code</a>
                         </div>
 
                     </div>
@@ -1291,62 +1026,26 @@
                 <div class="project-card">
 
                     <div class="project-card-visual">
-
-                        <img
-                            src="assets/img/projects/projec0.jpeg"
-                            alt="Information Management System"
-                            class="project-image"
-                        >
-
+                        <img src="assets/img/projects/projec0.jpeg" alt="Information Management System" class="project-image">
                         <div class="project-overlay"></div>
-
-                        <span class="project-card-number">PROJECT 02
-                            <span class="project-card-type">System</span>
-                        </span>                        
-
-                        <div class="project-icon">
-                            <i class="bi bi-database-check"></i>
-                        </div>
-
+                        <span class="project-card-number">PROJECT 02<span class="project-card-type">System</span></span>                        
+                        <div class="project-icon"><i class="bi bi-database-check"></i></div>
                     </div>
 
-
                     <div class="project-card-content">
-
-                        <h3>
-                            Information Management System
-                        </h3>
-
-                        <p>
-                            A practical system concept focused on
-                            storing, organizing and managing
-                            structured information.
-                        </p>
-
-
+                        <h3>Information Management System</h3>
+                        <p>A practical system concept focused on storing, organizing and managing structured information.</p>
                         <div class="project-card-tags">
-
                             <span>PHP</span>
                             <span>MySQL</span>
                             <span>CRUD</span>
                             <span>Database</span>
-
                         </div>
-
 
                         <div class="project-card-actions">
-
-                            <a href="#" class="project-view">
-                                View Project
-                            </a>
-
-                            <a href="#" class="project-code">
-                                <i class="bi bi-github"></i>
-                                Code
-                            </a>
-
+                            <a href="#" class="project-view">View Project</a>
+                            <a href="#" class="project-code"><i class="bi bi-github"></i>Code</a>
                         </div>
-
                     </div>
 
                 </div>
@@ -1364,62 +1063,27 @@
                 <div class="project-card">
 
                     <div class="project-card-visual">
-
-                        <img
-                            src="assets/img/projects/project3.jpg"
-                            alt="Academic IT Project"
-                            class="project-image"
-                        >
-
+                        <img src="assets/img/projects/project3.jpg" alt="Academic IT Project"class="project-image">
                         <div class="project-overlay"></div>
-
-                        <span class="project-card-number">PROJECT 03
-                            <span class="project-card-type">Academic</span>
-                        </span>
-
-
-                        <div class="project-icon">
-                            <i class="bi bi-mortarboard"></i>
-                        </div>
-
+                        <span class="project-card-number">PROJECT 03<span class="project-card-type">Academic</span></span>
+                        <div class="project-icon"><i class="bi bi-mortarboard"></i></div>
                     </div>
 
-
                     <div class="project-card-content">
-
-                        <h3>
-                            Academic IT Project
-                        </h3>
-
-                        <p>
-                            A learning project created to apply
-                            classroom concepts through practical
-                            Information Technology work.
-                        </p>
-
+                        <h3>Academic IT Project</h3>
+                        <p>A learning project created to apply classroom concepts through practical Information Technology work.</p>
 
                         <div class="project-card-tags">
-
                             <span>IT</span>
                             <span>Research</span>
                             <span>Analysis</span>
                             <span>Documentation</span>
-
                         </div>
-
 
                         <div class="project-card-actions">
-
-                            <a href="#" class="project-view">
-                                View Project
-                            </a>
-
-                            <a href="#" class="project-code">
-                                Details
-                            </a>
-
+                            <a href="#" class="project-view">View Project</a>
+                            <a href="#" class="project-code">Details</a>
                         </div>
-
                     </div>
 
                 </div>
@@ -1437,62 +1101,26 @@
                 <div class="project-card">
 
                     <div class="project-card-visual">
-
-                        <img
-                            src="assets/img/projects/project4.webp"
-                            alt="Responsive Website Project"
-                            class="project-image"
-                        >
-
+                        <img src="assets/img/projects/project4.webp" alt="Responsive Website Project" class="project-image">
                         <div class="project-overlay"></div>
-
-                        <span class="project-card-number">PROJECT 04
-                            <span class="project-card-type">Web</span>
-                        </span>
-
-                        <div class="project-icon">
-                            <i class="bi bi-window-stack"></i>
-                        </div>
-
+                        <span class="project-card-number">PROJECT 04<span class="project-card-type">Web</span></span>
+                        <div class="project-icon"><i class="bi bi-window-stack"></i></div>
                     </div>
 
-
                     <div class="project-card-content">
-
-                        <h3>
-                            Responsive Website
-                        </h3>
-
-                        <p>
-                            A responsive website experiment focused
-                            on modern layouts, navigation and
-                            mobile-friendly design.
-                        </p>
-
-
+                        <h3>Responsive Website</h3>
+                        <p>A responsive website experiment focused on modern layouts, navigation and mobile-friendly design.</p>
                         <div class="project-card-tags">
-
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>Bootstrap</span>
                             <span>UI</span>
-
                         </div>
-
 
                         <div class="project-card-actions">
-
-                            <a href="#" class="project-view">
-                                View Project
-                            </a>
-
-                            <a href="#" class="project-code">
-                                <i class="bi bi-github"></i>
-                                Code
-                            </a>
-
+                            <a href="#" class="project-view">View Project</a>
+                            <a href="#" class="project-code"><i class="bi bi-github"></i>Code</a>
                         </div>
-
                     </div>
 
                 </div>
@@ -1510,61 +1138,25 @@
                 <div class="project-card">
 
                     <div class="project-card-visual">
-
-                        <img
-                            src="assets/img/projects/project5.jpg"
-                            alt="UI Design Concept"
-                            class="project-image"
-                        >
-
+                        <img src="assets/img/projects/project5.jpg" alt="UI Design Concept" class="project-image">
                         <div class="project-overlay"></div>
-
-                        <span class="project-card-number">PROJECT 05
-                            <span class="project-card-type">Design</span>
-                        </span>
-
-                    
-                        <div class="project-icon">
-                            <i class="bi bi-palette"></i>
-                        </div>
-
+                        <span class="project-card-number">PROJECT 05<span class="project-card-type">Design</span></span>
+                        <div class="project-icon"><i class="bi bi-palette"></i></div>
                     </div>
 
-
                     <div class="project-card-content">
-
-                        <h3>
-                            UI Design Concept
-                        </h3>
-
-                        <p>
-                            A user interface concept exploring
-                            visual hierarchy, layout, typography
-                            and modern digital presentation.
-                        </p>
-
-
+                        <h3>UI Design Concept</h3>
+                        <p>A user interface concept exploring visual hierarchy, layout, typography and modern digital presentation.</p>
                         <div class="project-card-tags">
-
                             <span>Figma</span>
                             <span>UI Design</span>
                             <span>UX</span>
-
                         </div>
-
 
                         <div class="project-card-actions">
-
-                            <a href="#" class="project-view">
-                                View Design
-                            </a>
-
-                            <a href="#" class="project-code">
-                                Details
-                            </a>
-
+                            <a href="#" class="project-view">View Design</a>
+                            <a href="#" class="project-code">Details</a>
                         </div>
-
                     </div>
 
                 </div>
@@ -1582,63 +1174,26 @@
                 <div class="project-card">
 
                     <div class="project-card-visual">
-
-                        <img
-                            src="assets/img/projects/project6.jpg"
-                            alt="Network Concept Project"
-                            class="project-image"
-                        >
-
+                        <img src="assets/img/projects/project6.jpg" alt="Network Concept Project" class="project-image">
                         <div class="project-overlay"></div>
-
-                        <span class="project-card-number">PROJECT 06
-                            <span class="project-card-type">System</span>
-                        </span>
-
-                        
-
-                        <div class="project-icon">
-                            <i class="bi bi-diagram-3"></i>
-                        </div>
-
+                        <span class="project-card-number">PROJECT 06<span class="project-card-type">System</span></span>
+                        <div class="project-icon"><i class="bi bi-diagram-3"></i></div>
                     </div>
 
-
                     <div class="project-card-content">
-
-                        <h3>
-                            Network Concept Project
-                        </h3>
-
-                        <p>
-                            A practical learning project exploring
-                            network structure, communication,
-                            connectivity and troubleshooting concepts.
-                        </p>
-
-
+                        <h3>Network Concept Project</h3>
+                        <p> A practical learning project exploring network structure, communication, connectivity and troubleshooting concepts.</p>
                         <div class="project-card-tags">
-
                             <span>Networking</span>
                             <span>IP</span>
                             <span>LAN</span>
                             <span>Analysis</span>
-
                         </div>
-
 
                         <div class="project-card-actions">
-
-                            <a href="#" class="project-view">
-                                View Project
-                            </a>
-
-                            <a href="#" class="project-code">
-                                Details
-                            </a>
-
+                            <a href="#" class="project-view">View Project</a>
+                            <a href="#" class="project-code">Details</a>
                         </div>
-
                     </div>
 
                 </div>
@@ -1663,136 +1218,47 @@
     <div class="container">
 
         <div class="section-heading text-center reveal">
-
-            <span class="section-label">
-
-                <i class="bi bi-diagram-2"></i>
-
-                HOW I BUILD
-
-            </span>
-
-            <h2>
-
-                From Idea to
-                <span>Project</span>
-
-            </h2>
-
-            <p>
-
-                Every project gives me an opportunity to practice
-                a structured approach to solving problems.
-
-            </p>
-
+            <span class="section-label"><i class="bi bi-diagram-2"></i>HOW I BUILD</span>
+            <h2>From Idea to <span>Project</span></h2>
+            <p>Every project gives me an opportunity to practice a structured approach to solving problems.</p>
         </div>
-
 
         <div class="row g-4 mt-4">
 
-
             <div class="col-6 col-lg-3 reveal">
-
                 <div class="process-card">
-
-                    <div class="process-number">
-                        STEP 01
-                    </div>
-
+                    <div class="process-number">STEP 01</div>
                     <i class="bi bi-lightbulb"></i>
-
-                    <h3>
-                        Idea
-                    </h3>
-
-                    <p>
-
-                        Identify a problem, need or idea that
-                        can be explored through technology.
-
-                    </p>
-
+                    <h3>Idea</h3>
+                    <p>Identify a problem, need or idea that can be explored through technology.</p>
                 </div>
-
             </div>
 
-
             <div class="col-6 col-lg-3 reveal">
-
                 <div class="process-card">
-
-                    <div class="process-number">
-                        STEP 02
-                    </div>
-
+                    <div class="process-number">STEP 02</div>
                     <i class="bi bi-pencil-square"></i>
-
-                    <h3>
-                        Plan
-                    </h3>
-
-                    <p>
-
-                        Define requirements, structure the solution
-                        and decide which technologies to use.
-
-                    </p>
-
+                    <h3>Plan</h3>
+                    <p>Define requirements, structure the solution and decide which technologies to use.</p>
                 </div>
-
             </div>
 
-
             <div class="col-6 col-lg-3 reveal">
-
                 <div class="process-card">
-
-                    <div class="process-number">
-                        STEP 03
-                    </div>
-
+                    <div class="process-number">STEP 03</div>
                     <i class="bi bi-code-slash"></i>
-
-                    <h3>
-                        Build
-                    </h3>
-
-                    <p>
-
-                        Develop the project, test ideas and
-                        solve technical problems along the way.
-
-                    </p>
-
+                    <h3>Build</h3>
+                    <p>Develop the project, test ideas and solve technical problems along the way.</p>
                 </div>
-
             </div>
 
-
             <div class="col-6 col-lg-3 reveal">
-
                 <div class="process-card">
-
-                    <div class="process-number">
-                        STEP 04
-                    </div>
-
+                    <div class="process-number">STEP 04</div>
                     <i class="bi bi-arrow-repeat"></i>
-
-                    <h3>
-                        Improve
-                    </h3>
-
-                    <p>
-
-                        Review the result, fix issues and improve
-                        the project through continuous learning.
-
-                    </p>
-
+                    <h3>Improve</h3>
+                    <p>Review the result, fix issues and improve the project through continuous learning.</p>
                 </div>
-
             </div>
 
         </div>
@@ -1813,85 +1279,22 @@
         <div class="technology-box reveal">
 
             <div class="section-heading text-center mb-0">
-
-                <span class="section-label">
-
-                    <i class="bi bi-stack"></i>
-
-                    TECHNOLOGIES
-
-                </span>
-
-                <h2>
-
-                    Technologies I Am
-                    <span>Exploring</span>
-
-                </h2>
-
-                <p>
-
-                    My projects give me opportunities to practice
-                    different technologies and understand how they
-                    work together.
-
-                </p>
-
+                <span class="section-label"><i class="bi bi-stack"></i>TECHNOLOGIES</span>
+                <h2>Technologies I Am <span>Exploring</span></h2>
+                <p>My projects give me opportunities to practice different technologies and understand how they work together.</p>
             </div>
 
-
             <div class="technology-list">
-
-                <div class="technology-item">
-                    <i class="bi bi-filetype-html"></i>
-                    HTML
-                </div>
-
-                <div class="technology-item">
-                    <i class="bi bi-filetype-css"></i>
-                    CSS
-                </div>
-
-                <div class="technology-item">
-                    <i class="bi bi-filetype-js"></i>
-                    JavaScript
-                </div>
-
-                <div class="technology-item">
-                    <i class="bi bi-bootstrap"></i>
-                    Bootstrap
-                </div>
-
-                <div class="technology-item">
-                    <i class="bi bi-filetype-php"></i>
-                    PHP
-                </div>
-
-                <div class="technology-item">
-                    <i class="bi bi-database"></i>
-                    MySQL
-                </div>
-
-                <div class="technology-item">
-                    <i class="bi bi-git"></i>
-                    Git
-                </div>
-
-                <div class="technology-item">
-                    <i class="bi bi-github"></i>
-                    GitHub
-                </div>
-
-                <div class="technology-item">
-                    <i class="bi bi-palette"></i>
-                    Figma
-                </div>
-
-                <div class="technology-item">
-                    <i class="bi bi-terminal"></i>
-                    VS Code
-                </div>
-
+                <div class="technology-item"><i class="bi bi-filetype-html"></i>HTML</div>
+                <div class="technology-item"><i class="bi bi-filetype-css"></i>CSS</div>
+                <div class="technology-item"><i class="bi bi-filetype-js"></i>JavaScript</div>
+                <div class="technology-item"><i class="bi bi-bootstrap"></i>Bootstrap</div>
+                <div class="technology-item"><i class="bi bi-filetype-php"></i>PHP</div>
+                <div class="technology-item"><i class="bi bi-database"></i>MySQL</div>
+                <div class="technology-item"><i class="bi bi-git"></i>Git</div>
+                <div class="technology-item"><i class="bi bi-github"></i>GitHub</div>
+                <div class="technology-item"><i class="bi bi-palette"></i>Figma</div>
+                <div class="technology-item"><i class="bi bi-terminal"></i>VS Code</div>
             </div>
 
         </div>
@@ -1912,63 +1315,15 @@
         <div class="cta-box reveal">
 
             <div class="cta-content">
-
-                <span class="section-label">
-
-                    <i class="bi bi-stars"></i>
-
-                    KEEP BUILDING
-
-                </span>
-
-                <h2>
-
-                    Every project is
-                    another <span>lesson.</span>
-
-                </h2>
-
-                <p>
-
-                    My projects are part of an ongoing learning
-                    process. Each one helps me understand technology,
-                    solve problems and become better.
-
-                </p>
-
-
+                <span class="section-label"><i class="bi bi-stars"></i>KEEP BUILDING</span>
+                <h2>Every project is another <span>lesson.</span></h2>
+                <p>My projects are part of an ongoing learning process. Each one helps me understand technology, solve problems and become better.</p>
                 <div class="d-flex flex-wrap gap-3">
-
-                    <a
-                        href="skills.html"
-                        class="btn btn-primary-vipm">
-
-                        Explore My Skills
-
-                        <i class="bi bi-arrow-right"></i>
-
-                    </a>
-
-                    <a
-                        href="journey.html"
-                        class="btn btn-outline-vipm">
-
-                        My Journey
-
-                        <i class="bi bi-signpost-split"></i>
-
-                    </a>
-
+                    <a href="skills.html" class="btn btn-primary-vipm">Explore My Skills <i class="bi bi-arrow-right"></i></a>
+                    <a href="journey.html" class="btn btn-outline-vipm">My Journey <i class="bi bi-signpost-split"></i></a>
                 </div>
-
             </div>
-
-
-            <div class="cta-decoration">
-
-                <i class="bi bi-kanban"></i>
-
-            </div>
+            <div class="cta-decoration"><i class="bi bi-kanban"></i></div>
 
         </div>
 
@@ -1987,181 +1342,48 @@
 
         <div class="row g-5">
 
-
             <!-- Brand -->
 
             <div class="col-lg-5">
-
-                <a
-                    href="index.html"
-                    class="vipm-brand footer-brand">
-
-                    <span class="brand-icon">
-
-                        <i class="bi bi-code-slash"></i>
-
-                    </span>
-
-                    <span class="brand-text">
-
-                        VIPM<span>TECHJOURNEY</span>
-
-                    </span>
-
-                </a>
-
-
-                <p class="footer-description">
-
-                    A personal IT journey focused on learning,
-                    building, exploring technology and preparing
-                    for the future.
-
-                </p>
-
-
+                <a href="index.html" class="vipm-brand footer-brand"><img src="images/logo.png" alt="VIPM TECHJOURNEY Logo" class="vipm-logo"></a>
+                <p class="footer-description">A personal IT journey focused on learning, building, exploring technology and preparing for the future.</p>
                 <div class="social-links">
-
-                    <a href="#" aria-label="GitHub">
-                        <i class="bi bi-github"></i>
-                    </a>
-
-                    <a href="#" aria-label="LinkedIn">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-
-                    <a href="#" aria-label="Instagram">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-
-                    <a
-                        href="https://wa.me/255786459085"
-                        target="_blank"
-                        aria-label="WhatsApp">
-
-                        <i class="bi bi-whatsapp"></i>
-
-                    </a>
-
+                    <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://wa.me/255786459085" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
                 </div>
-
             </div>
-
 
             <!-- Links -->
 
             <div class="col-6 col-lg-3">
-
-                <h4>
-                    Quick Links
-                </h4>
-
+                <h4>Quick Links</h4>
                 <ul class="footer-links">
-
-                    <li>
-                        <a href="index.html">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="journey.html">
-                            My Journey
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="skills.html">
-                            Skills
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="projects.html">
-                            Projects
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact
-                        </a>
-                    </li>
-
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="journey.html">My Journey</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
-
             </div>
-
 
             <!-- Contact -->
 
             <div class="col-6 col-lg-4">
-
-                <h4>
-                    Contact
-                </h4>
-
+                <h4>Contact</h4>
                 <ul class="footer-contact">
-
-                    <li>
-
-                        <i class="bi bi-geo-alt"></i>
-
-                        <span>
-                            NIT, Mabibo,<br>
-                            Dar es Salaam, Tanzania
-                        </span>
-
-                    </li>
-
-                    <li>
-
-                        <i class="bi bi-envelope"></i>
-
-                        <a href="mailto:vipmmaranatha03@gmail.com">
-
-                            vipmmaranatha03@gmail.com
-
-                        </a>
-
-                    </li>
-
-                    <li>
-
-                        <i class="bi bi-telephone"></i>
-
-                        <a href="tel:+255786459085">
-
-                            0786459085
-
-                        </a>
-
-                    </li>
-
+                    <li><i class="bi bi-geo-alt"></i><span>NIT, Mabibo,<br>Dar es Salaam, Tanzania</span></li>
+                    <li><i class="bi bi-envelope"></i><a href="mailto:vipmmaranatha03@gmail.com">vipmmaranatha03@gmail.com</a></li>
+                    <li><i class="bi bi-telephone"></i><a href="tel:+255786459085">+255 786 459 085</a></li>
                 </ul>
-
             </div>
 
         </div>
 
-
         <div class="footer-bottom">
-
-            <p>
-
-                © <span id="currentYear"></span>
-                VIPM TECHJOURNEY.
-                All Rights Reserved.
-
-            </p>
-
-            <p>
-
-                Learning today.
-                Building tomorrow.
-
-            </p>
-
+            <p>© <span id="currentYear"></span> VIPM TECHJOURNEY. All Rights Reserved.</p>
+            <p>Learning today. Building tomorrow.</p>
         </div>
 
     </div>
